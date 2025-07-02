@@ -85,7 +85,7 @@ def client(db_session):
 
 
 @pytest.fixture(scope="function")
-def auth_header(client, db_session):
+def auth_headers(client, db_session):
     # Register a test user
     response = client.post(
         "/auth/",
